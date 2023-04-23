@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Desccription</th>
+        <th scope="col">Categorie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let postt of posts">
+        <th>{{postt?.id}}</th>
+        <td>{{postt?.titre}}</td>
+        <td>{{postt?.description}}</td>
+
+        <td>{{postt.categorie}}</td>
+        <td></td>
+        <td>
+            <button class="btn btn-info text-white me-1" [routerLink]="['/update',posts?.id]">
+                <i class="fa fa-edit"></i>Modifier </button>
+
+                
+            <button class="btn btn-danger" (click)="deletpostt(postt?.id)">
+                <i class="fa fa-trash"></i>Supprimer </button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>

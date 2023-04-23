@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "titre": "sdfghgfd",
+      "description": "rgthgghgfds rjghftdgrfsdq",
+      "categorie": "",
+      "id": 7
+    },
+    {
+      "titre": "azazaz",
+      "description": "azertty azerty",
+      "categorie": "",
+      "id": 8
+    },
+    {
+      "titre": "new post",
+      "description": "u post sportif",
+      "categorie": "",
+      "id": 9
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

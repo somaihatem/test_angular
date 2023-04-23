@@ -1,0 +1,31 @@
+<div class="container-fluid" id="ff">
+<h1 class="t">Create a new post</h1>
+
+<form  *ngIf ="postForm" [formGroup]="postForm" (ngSubmit)="add()" class="">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Titre</label>
+    <input type="text" class="form-control " id="titre"  formControlName="titre" [ngClass]="{'is-valid':submitted && !postForm.get('titre')?.errors,'is-invalid':submitted && postForm.get('titre')?.errors}">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea class="form-control" id="description" formControlName="description" [ngClass]="{'is-valid':submitted && !postForm.get('description')?.errors,'is-invalid':submitted && postForm.get('description')?.errors}"></textarea>
+  
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label" >Categorie</label>
+  <select class="form-control" aria-label="Default select example" id="categorie ">
+
+    <option selected>Open this select menu</option>
+    <option value="sport">Sport</option>
+    <option value="Technologie">Technologie</option>
+    <option value="Economie">Economie</option>
+    <option value="Societe">Societe</option>
+    <option value="Culture">Culture</option>
+  </select>
+  </div>
+  <button type="submit" class="btn btn-success" id="b">Add Post</button><br>
+  <button type="button" class="btn btn-primary" id="bb">Back</button>
+</form>
+</div>

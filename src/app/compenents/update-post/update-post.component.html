@@ -1,0 +1,28 @@
+<div class="container-fluid" id="ff">
+    <h1 class="t">Create a new post</h1>
+    <form *ngIf ="postForm" [formGroup]="postForm" (ngSubmit)="updatepostsById()" class="">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Titre</label>
+        <input type="text" class="form-control" id="titre" placeholder="donner le titre">
+      </div>
+    </form>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea class="form-control" id="description" rows="3"></textarea>
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Categorie</label>
+      <select class="form-control" aria-label="Default select example" id ="categorie">
+        <option selected>Open this select menu</option>
+        <option value="sport">Sport</option>
+        <option value="technologie">Technologie</option>
+        <option value="economie">Economie</option>
+        <option value="societe">Societe</option>
+        <option value="culture">Culture</option>
+      </select>
+      </div>
+      <button type="button" class="btn btn-success" id="b">Update Post</button><br>
+      <button type="button" class="btn btn-primary" id="bb">Back</button>
+    
+    </div>
